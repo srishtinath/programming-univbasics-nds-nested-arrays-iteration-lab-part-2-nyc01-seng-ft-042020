@@ -10,7 +10,7 @@ def find_min_in_nested_arrays(src)
       if element_index < minimum_value
         minimum_value = element_index
       end
-      
+      element_index +=1
     end
 
   end
