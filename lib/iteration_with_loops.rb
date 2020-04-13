@@ -4,8 +4,17 @@ def find_min_in_nested_arrays(src)
   min_values = []
   row_index = 0
   while row_index < src.count do
-    min_values << src.sort.first
-    row_index +=1
+    element_index = 0
+    minimum = 1000000000
+  while element_index < src[row_index].count do
+    if src[row_index][element_index] < minimum
+      minimum = src[row_index][element_index]
+    end
+    element_index += 1
   end
-  min_values
+  min_values << minimum
+  row_index += 1
+end
+
+min_values
 end
